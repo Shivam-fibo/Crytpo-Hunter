@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { HistoricalChart } from "../config/api";
 import { Line } from "react-chartjs-2";
+import Chart from 'chart.js/auto';
+
 import {
   CircularProgress,
   createTheme,
@@ -17,6 +19,7 @@ const CoinInfo = ({ coin }) => {
   const [days, setDays] = useState(1);
   const { currency } = CryptoState();
   const [flag,setflag] = useState(false);
+ 
 
   const useStyles = makeStyles((theme) => ({
     container: {
@@ -96,6 +99,7 @@ const CoinInfo = ({ coin }) => {
                     radius: 1,
                   },
                 },
+                
               }}
             />
             <div
