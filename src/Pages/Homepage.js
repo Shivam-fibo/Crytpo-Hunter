@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../Componets/Banner'
+import Banner from '../Componets/Banner/Banner'
 import CoinsTable from "../Componets/CoinsTable"
 const Homepage = () => {
   return (
