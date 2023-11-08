@@ -66,7 +66,9 @@ const useStyles = makeStyles((theme) => ({
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
+
         }}
+      
       >
         <Fade in={open}>
           <div className={classes.paper}>

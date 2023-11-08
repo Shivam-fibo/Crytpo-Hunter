@@ -7,8 +7,10 @@ const Alert = () => {
 
     const {alert, setAlert} = CryptoState();
 
-    const handleClose = (even, reson) =>{
-        if(reson=== "clickaway")
+    
+
+    const handleClose = (even, reason) =>{
+        if(reason=== "clickaway")
         {
             return;
         }
@@ -18,7 +20,10 @@ const Alert = () => {
     }
   return (
    <Snackbar open = {alert.open} autoHideDuration = {3000} onClose = {handleClose}>
-    <MuiAlert onClose={handleClose}>
+    <MuiAlert onClose={handleClose} elevation = {10} variant = "filled" severity= {alert.type}>
+        
+            {alert.message}
+        
 
     </MuiAlert>
 
